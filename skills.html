@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=IM+Fell+DW+Pica+SC&family=Pirata+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+<button id="dark-mode" onclick="trocarTema()">
+    ⚓ Modo Fantasma
+</button>
+    <div class="fundo-skills"></div>
+
+<div class="sessao-skills">
+        <h1 class="titulo-pagina">Arsenal de Habilidades</h1>
+        
+        <div class="painel-interativo">
+            
+            <ul class="lista-skills">
+                <li onclick="mostrarSkill('html')">HTML5</li>
+                <li onclick="mostrarSkill('css')">CSS3</li>
+                <li onclick="mostrarSkill('js')">JavaScript</li>
+                <li onclick="mostrarSkill('mysql')">MySQL</li>
+                <li onclick="mostrarSkill('csharp')">C#</li>
+                <li onclick="mostrarSkill('ingles')">Inglês Básico</li>
+            </ul>
+
+           
+            <div class="detalhes-skill">
+                <h2 id="tituloSkill">Escolha sua Arma!</h2>
+                <p id="descricaoSkill">Clique em uma das habilidades ao lado para revelar o meu nível de conhecimento dos mares da programação.</p>
+                
+                <div class="barra-fundo">
+                    <div class="barra-progresso" id="barraProgresso"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+ 
+<div class="header">
+    <div class="painel-icone-madeira">
+        <ul>
+            <li>
+                <a href="projetos.html">
+                    <img src="iconeProjetos.png" alt="projetos" class="iconeImg">
+                    <span class="legenda-texto">Abra o bau e veja meus projetos!</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html">
+                    <img src="iconeSkills.png" alt="skills" class="iconeImg">
+                    <span class="legenda-texto">Veja as minhas habilidades!</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <img src="iconeSobreMim.png" alt="Sobre Mim" class="iconeImg">
+                    <span class="legenda-texto">Leia o pergaminho Para Saber Sobre Mim</span>
+                </a>
+            </li>
+            <li>
+                <a href="contato.html">
+                    <img src="iconeMensagem.png" alt="Mensagem" class="iconeImg">
+                    <span class="legenda-texto">Envie uma mensagem ao Capitão</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+ <a href="index.html" class="sea-of-thieves">
+    <img src="seaofthieves.jpg" alt="Sea of Thieves">
+</a>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

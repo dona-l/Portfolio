@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+.header {
+    position: absolute;
+    top: 30vh;
+    left: 4vw; 
+    display: flex;
+  
+    z-index: 10;
+}
+
+.header a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+   cursor: pointer;
+   position: relative;
+}
+.header a span {
+    position: absolute;
+    left: 120px;
+    white-space: nowrap;
+
+   font-family: 'Cinzel Decorative', serif;
+   color: #dfdf66;
+   font-size: 18px;
+   font-weight: bold;
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+   transform: translateY(-10px);
+   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.iconeImg {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+ 
+}
+.painel-icone-madeira {
+    background-image: url('fundoMadeira.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: 4px solid #3d2314;
+    padding: 18px 12px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.15);
+}
+.painel-icone-madeira ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+ .videoConves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    
+filter: brightness(0.9) contrast(1.1);
+ }
+
+ .header a:hover .iconeImg {
+    
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 10px rgba(6, 60, 175, 0.8));
+}
+
+
+.header a:hover span {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.titulo-capitao {
+    position: absolute;
+    top: 8vh;      
+    left: 4vw;     
+    z-index: 10;  
+    animation: surgirTitulo 1.5s ease-out forwards;  
+}
+
+
+.titulo-capitao h1 {
+ font-family: "IM Fell DW Pica SC";
+ 
+  
+    color: #dfdf66;
+    font-size: 38px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 215, 0, 0.6);
+    text-transform: uppercase;
+}
+@keyframes surgirTitulo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.sea-of-thieves img {
+    position: absolute;
+    
+    height: 120px !important;
+    width: 120px !important;
+    top: 77vh;
+    left: 88vw;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(68, 202, 6, 0.5);
+    z-index: 10;  
+    animation: surgirSeaOfThieves 1.5s ease-out forwards; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+} 
+.sea-of-thieves img:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 10px rgba(68, 202, 6, 0.8));
+}
+
+@keyframes surgirSeaOfThieves {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.caixa-boas-vindas {
+    position: absolute;
+    top: 25vh;       
+    left: 49vw;      
+    width: 35vw;      
+    
+    
+    background-color: rgba(30, 15, 5, 0.85); 
+    border: 2px solid #d4af37;               
+    border-radius: 15px;                     
+    padding: 40px;                           
+    
+    box-shadow: 0 15px 30px rgba(139, 119, 25, 0.8); 
+    z-index: 10;
+    
+    
+    animation: surgirCaixa 1.5s ease-out forwards, flutuarNavio 4s ease-in-out infinite 1.5s;
+}
+
+
+.caixa-boas-vindas h1 {
+    font-family: 'Pirata One', 'Cinzel Decorative', cursive; 
+    color: #ffd700;                                          
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;                                    
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+
+.caixa-boas-vindas p {
+    font-family: 'Arial', sans-serif; 
+    color: #e0e0e0;                  
+    font-size: 19px;
+    line-height: 1.6;                
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+
+@keyframes surgirCaixa {
+    0% {
+        opacity: 0;                  
+        transform: translateY(30px);  
+    }
+    100% {
+        opacity: 1;                  
+        transform: translateY(0);     
+    }
+}
+
+@keyframes flutuarNavio {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+       
+        transform: translateY(-10px) rotate(0.8deg); 
+    }
+    100% {
+        
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+/* 1. ÁREA DOS PROJETOS */
+.sessao-projetos {
+    position: absolute;
+    top: 10vh;
+    left: 20vw; 
+    width: 75vw;
+    z-index: 10;
+    animation: surgirTitulo 1.5s ease-out forwards;
+}
+
+
+.titulo-pagina {
+    font-family: 'Pirata One', 'Cinzel Decorative', cursive;
+    color: #ffd700;
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    margin-bottom: 40px;
+}
+
+
+.grid-projetos {
+    display: flex;
+    gap: 30px;        
+    flex-wrap: wrap;   
+}
+
+
+.cartao-projeto {
+    background-color: rgba(30, 15, 5, 0.85); 
+    border: 2px solid #d4af37;              
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;                           
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    left: 40vh
+}
+
+
+.cartao-projeto:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3); 
+}
+
+
+.cartao-projeto h2 {
+    color: #ffd700;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    margin: 15px 0 10px 0;
+}
+
+.cartao-projeto p {
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.botao-ver {
+    display: inline-block;
+    background-color: #3d2314;
+    color: #ffd700;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-ver:hover {
+    background-color: #d4af37;
+    color: #3d2314; 
+}
+
+
+.imagem-projeto-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #111;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+
+.fundo-projetos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    background-image: url('fundoProjetos.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+    filter: brightness(0.7) contrast(1.1);
+    
+    
+    animation: surgirFundo 2s ease-out forwards;
+}
+
+
+@keyframes surgirFundo {
+    0% {
+        opacity: 0.6;              
+        transform: scale(1.1);   
+    }
+    100% {
+        opacity: 1;              
+        transform: scale(1);     
+    }
+}
+
+.sessao-sobre {
+    position: absolute;
+    top: 20vh;
+    left: 22vw;         
+    display: flex;        
+    align-items: center;  
+    gap: 50px;            
+    z-index: 10;
+}
+
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    
+  
+    border-radius: 50%; 
+    border: 4px solid #d4af37; 
+    object-fit: cover;       
+    
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    
+  
+    animation: surgirCaixa 1.5s ease-out forwards, flutuarNavio 4s ease-in-out infinite 1.5s;
+}
+
+
+.caixa-texto-sobre {
+    width: 40vw; 
+    background-color: rgba(22, 7, 7, 0.85); 
+    border: 2px solid #bea720;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    
+    
+    opacity: 0; 
+    
+    
+   
+    animation: surgirCaixa 1.5s ease-out forwards 0.5s, flutuarNavio 4s ease-in-out infinite 2s;
+}
+
+
+.caixa-texto-sobre h1 {
+    font-family: 'Pirata One', 'Cinzel Decorative', cursive;
+    color: #ffd700;
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.caixa-texto-sobre p {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.fundo-sobre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('fundoSobreMim.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.7) contrast(1.1);
+    
+    
+    animation: surgirFundo 2s ease-out forwards;
+}
+
+.sessao-contato {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    width: 50vw;          
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+.caixa-contato {
+    background-color: rgba(30, 15, 5, 0.85);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+
+    
+    animation: surgirCaixa 1.5s ease-out forwards, flutuarNavio 4s ease-in-out infinite 1.5s;
+}
+
+
+.caixa-contato h1 {
+    font-family: 'Pirata One', 'Cinzel Decorative', cursive;
+    color: #ffd700;
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.caixa-contato p {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+
+.redes-sociais {
+    display: flex;
+    flex-wrap: wrap;        
+    gap: 20px;              
+    justify-content: center;
+}
+
+
+.botao-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #3d2314;   
+    color: #ffd700;             
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    
+   
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.botao-contato:hover {
+    transform: translateY(-5px) scale(1.05);        
+    background-color: #d4af37;                      
+    color: #1a0b02;                                  
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6); 
+}
+
+
+.icone-rede {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.fundo-mensagem {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('FundoMensagem.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+    filter: brightness(0.7) contrast(1.1);
+    
+    animation: surgirFundo 2s ease-out forwards;
+}
+.fundo-skills {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('fundoMinhasHabilidades.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.7) contrast(1.1);
+    animation: surgirFundo 2s ease-out forwards;
+}
+
+.sessao-skills {
+    position: absolute;
+    top: 15vh;
+    left: 22vw;
+    width: 65vw;
+    z-index: 10;
+    animation: surgirCaixa 1.5s ease-out forwards;
+}
+
+.painel-interativo {
+    display: flex;
+    background-color: rgba(30, 15, 5, 0.85); 
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    gap: 40px; 
+}
+
+.lista-skills {
+    list-style: none; 
+    width: 35%;
+    padding: 0;
+}
+
+.lista-skills li {
+    background-color: #3d2314;
+    color: #ffd700;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.lista-skills li:hover {
+    transform: scale(1.05); 
+    background-color: #d4af37;
+    color: #1a0b02;
+}
+
+
+.detalhes-skill {
+    width: 65%;
+    text-align: left;
+}
+
+.detalhes-skill h2 {
+    color: #ffd700;
+    font-family: 'Pirata One', 'Cinzel Decorative', cursive;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.detalhes-skill p {
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    height: 80px; 
+}
+
+
+.barra-fundo {
+    width: 100%;
+    height: 25px;
+    background-color: #111; 
+    border-radius: 10px;
+    border: 2px solid #555;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    height: 100%;
+    width: 0%; 
+    background: linear-gradient(90deg, #b8860b, #ffd700); 
+    transition: width 1s ease-in-out; 
+}
+
+
+
+
+#dark-mode {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    
+   
+    background-color: #3d2314; 
+    color: #ffd700;            
+    font-size: 16px;
+    font-weight: bold;
+    
+   
+    padding: 10px 20px;        
+    border: 2px solid #d4af37; 
+    border-radius: 10px;      
+    cursor: pointer;          
+    z-index: 100;             
+    
+  
+    transition: 0.3s;          
+}
+
+
+#dark-mode:hover {
+    background-color: #d4af37; 
+    color: black;             
+    transform: scale(1.1);    
+}
+
+
+/* =========================================
+   👻 MODO FANTASMA (O SEU MODO ESCURO)
+========================================= */
+
+/* 1. As caixas ficam pretas e ganham uma AURA ASSOMBRADA (Glow) */
+body.tema-fantasma .caixa-boas-vindas,
+body.tema-fantasma .painel-interativo,
+body.tema-fantasma .caixa-contato,
+body.tema-fantasma .cartao-projeto {
+    background-color: black !important;
+    border-color: #00ffcc !important;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.4) !important;
+}
+
+/* 2. Textos ficam cianos e ganham BRILHO NEON */
+body.tema-fantasma h1,
+body.tema-fantasma h2,
+body.tema-fantasma p,
+body.tema-fantasma li {
+    color: #00ffcc !important;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8) !important;
+}
+
+/* 3. Escurece APENAS os fundos (Corrigido!) */
+body.tema-fantasma .videoConves,
+body.tema-fantasma .fundo-projetos,
+body.tema-fantasma .fundo-skills {
+    filter: brightness(0.2) !important; 
+}
+
+/* 4. Os ícones do menu viram RELÍQUIAS AMALDIÇOADAS! */
+body.tema-fantasma .icone-img {
+    filter: grayscale(100%) drop-shadow(0 0 10px #00ffcc) !important;
+}
